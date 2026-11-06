@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tacos Lokos - Contacto</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="../js/script.js"></script>
+    <style>
+        #content form {
+            margin-top: 20px;
+        }
+        #content form input[type="text"],
+        #content form textarea {
+            width: 100%;
+            background-color: #f4f4f4;
+            border: none;
+            border-left: 4px solid #ff6600;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #222;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        #content form p {
+            margin-bottom: 5px;
+            color: #ff6600;
+            font-weight: bold;
+        }
+        #content form input[type="submit"],
+        #content form input[type="reset"] {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        #sideRight .horarios-box {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            border-bottom: 4px solid #ff6600;
+        }
+        #sideRight .horarios-box h2 {
+            color: #ff6600;
+            margin-top: 0;
+            font-size: 1.2em;
+            border-bottom: 1px dashed #777;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        #sideRight .horarios-box p {
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>            
+<body>
+    <div id="wrapper">
+        <!-- CABECERA -->
+        <div id="header">
+            <img src="../images/Encabezado.jpeg" alt="Banner de Tacos Lokos">
+        </div>
+
+        <!-- MENU -->
+        <div id='cssmenu'>
+            <ul>
+               <li><a href='../index.html'><span>Inicio</span></a></li>
+               <li class='has-sub'><a href='../html/tacos.html'><span>Tacos</span></a>
+                  <ul>
+                     <li class='last'><a href='../html/tacos.html'><span>Nuestros Lokos</span></a></li>
+                  </ul>
+               </li>
+               <li class='has-sub'><a href='../html/galeria.html'><span>Galería</span></a>
+                  <ul>
+                     <li><a href='../html/galeria.html'><span>Company</span></a></li>
+                     <li class='last'><a href='../html/contacto.html'><span>Contact</span></a></li>
+                  </ul>
+               </li>
+               <li><a href='../html/tarifas.html'><span>Tarifas</span></a></li>
+               <li class='active last'><a href='../html/contacto.html'><span>Contacto</span></a></li>
+            </ul>
+        </div>  
+
+        <!-- Div central -->        
+        <div id="middle">
+            <div id="content">
+                <h1 style="color: #ff6600; text-transform: uppercase;">Contacto y Ubicación</h1>
+                <p>¿Tienes dudas o quieres reservar para el Reto Loko XXXXL? ¡Contáctanos!</p>
+
+                <form action="#" method="get">
+                    <p>Dirección / Nombre:</p>
+                    <input type="text" name="nombre">
+                    
+                    <p>Teléfono de Pedidos / Tu teléfono:</p>
+                    <input type="text" name="telefono">
+                    
+                    <p>Email:</p>
+                    <input type="text" name="email">
+
+                    <p>Mensaje o Reserva:</p>
+                    <textarea name="mensaje" rows="5" cols="40"></textarea>
+                    
+                    <br>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </form>
+            </div>            
+
+            <!-- Panel de la derecha -->
+            <div class="sidebar" id="sideRight">
+                <div class="sidebar-seccion horarios-box">
+                    <h2>⏰ HORARIOS LOKOS</h2>
+                    <p><strong>Comidas:</strong> 13:00 - 16:00</p>
+                    <p><strong>Cenas:</strong> 19:30 - 23:30</p>
+                    <p><em>(Fines de semana hasta las 02:00)</em></p>
+                </div>
+            </div>
+        </div>
+
+       <div id="footer">
+            <h3>TACOS LOKOS</h3>
+            <p><strong>El auténtico French Taco</strong></p>
+            <p>📍 Calle Luis Apruebanos, Zaragoza | 📞 Pedidos al: +34 676 67 67 67</p>
+            
+            <div class="footer-nav">
+                <a href="../index.html">INICIO</a> | 
+                <a href="../html/tacos.html">TACOS</a> | 
+                <a href="../html/galeria.html">GALERÍA</a> | 
+                <a href="../html/tarifas.html">TARIFAS</a> | 
+                <a href="../html/contacto.html">CONTACTO</a>
+            </div>
+
+            <!-- Botones con tus iconos para Instagram y TikTok -->
+            <div class="redes-sociales" style="margin-top: 15px;">
+                <a href="https://www.instagram.com/litaco.frances/" target="_blank">
+                    <img src="../images/square-instagram-brands-solid-full.svg" alt="Instagram" style="width: 35px; height: 35px; vertical-align: middle; margin: 0 10px;">
+                </a>
+                <a href="https://www.tiktok.com/search?q=taco%20frances&t=1793980506877" target="_blank">
+                    <img src="../images/tiktok-brands-solid-full.svg" alt="TikTok" style="width: 35px; height: 35px; vertical-align: middle; margin: 0 10px;">
+                </a>
+            </div>
+
+            <p style="margin-top: 15px;">© 2026 Tacos Lokos. Todos los derechos reservados.</p>
+        </div>
+    </div>  
+</body>
+</html>

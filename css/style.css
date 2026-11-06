@@ -1,0 +1,515 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6em; 
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #FF6600;
+    border-radius: 10px;
+    overflow: hidden; /*  oculta el contenido que sobresale de los bordes redondeados */
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(255, 102, 0, 0.2); /* sombra de caja con color RGBA */
+}
+
+
+#header {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+#header img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /*  object-fit: cover y object-position: center 
+       hacen que la imagen de cabecera rellene todo el contenedor de 300px de alto 
+       recortando los bordes sobrantes desde el centro sin deformarse ni achatarse. */
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#cssmenu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase; /*texto en mayúsculas */
+    text-align: left;
+    position: relative; 
+    z-index: 9999; /* sitúa el menú en la capa superior para que el desplegable no quede tapado */
+}
+
+#cssmenu ul {
+    list-style-type: none; /* quita los puntos de la lista */
+    padding: 0px;
+    margin: 0px;
+    background-color: #ffffff;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF6600;
+}
+
+#cssmenu ul li {
+    display: inline-block; /* coloca los elementos del menú en horizontal */
+}
+
+#cssmenu ul li.right {
+    float: right; /* flota el elemento a la derecha */
+}
+
+#cssmenu ul li.has-sub {
+    position: relative;
+}
+
+#cssmenu ul li.has-sub:hover ul {
+    display: block; /* Muestra el submenú al pasar el ratón por encima (:hover) */
+}
+
+#cssmenu ul li.has-sub ul {
+    display: none; /* Oculta el submenú por defecto (UD3 Box Model) */
+    width: 220px;
+    position: absolute; /*  Posicionamiento: posición absoluta respecto al padre */
+    top: 100%;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF6600;
+    z-index: 9999;
+}
+
+#cssmenu ul li.has-sub ul li {
+    display: block; /* Los ítems del desplegable se muestran en vertical (bloque) */
+}
+
+#cssmenu ul li a {
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+    padding-right: 24px;
+    text-decoration: none; /* quita el subrayado del enlace */
+    color: #FF6600;
+    font-weight: bold; /* texto en negrita */
+    text-shadow: none;
+}
+
+
+#cssmenu ul li a:hover,
+#cssmenu ul li a.active,
+#cssmenu ul li.active a {
+    background-color: #FF6600;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+
+h1, h2, h3 {
+    font-family: Impact, "Arial Black", sans-serif; 
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Separación entre caracteres  */
+    margin-top: 0px;
+}
+
+#middle {
+    max-width: 1200px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+#content, .content {
+    display: inline-block;
+    vertical-align: top; /* Alinea las cajas tomando como referencia su borde superior */
+    width: 64%;
+    margin-right: 3%;
+}
+
+/* Cuando una página no tenga barra lateral y ocupe todo el ancho */
+#content.ancho-completo {
+    width: 100%;
+    margin-right: 0px;
+}
+
+#content h1, .content h1 {
+    color: #ff5e00;
+    font-size: 2.5em; /* Tamaño en em  */
+    margin-bottom: 10px;
+}
+
+/* Columna lateral derecha (Sidebar) alineada con inline-block */
+#sideRight, .right-sidebar {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 25px 20px;
+    border-radius: 10px; /* Bordes redondeados  */
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
+    border-bottom-color: #ff5e00;
+}
+
+#sideRight h2, .right-sidebar h2 {
+    color: #ff5e00;
+    border-bottom-width: 2px;
+    border-bottom-style: dashed; /*  borde discontinuo de guiones */
+    border-bottom-color: #f4f4f4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.sidebar-seccion {
+    margin-bottom: 30px;
+}
+
+.sidebar-seccion ul {
+    list-style-type: none; /* UD4 Listas */
+    padding: 0px;
+}
+
+.sidebar-seccion li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+.pasos-lista {
+    list-style-type: none; /* sin viñeta */
+    padding: 0px;
+}
+
+.pasos-lista li {
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #ff5e00;
+    font-weight: bold;
+}
+
+.pasos-lista span {
+    color: #ff5e00;
+    font-size: 1.2em;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #ff5e00;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /*  transición suave de color */
+    box-shadow: 4px 4px 0px #1a1a1a; /*  sombra sólida lateral */
+}
+
+.btn-principal:hover {
+    background-color: #1a1a1a;
+    color: #ff5e00;
+}
+
+.link-delivery {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    background-color: #333333;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.link-delivery:hover {
+    background-color: #ff5e00;
+}
+
+
+.reto-xxxxl {
+    border-width: 4px;
+    border-style: solid;
+    border-color: #FF3300;
+    background-color: #FFF8F2;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.badge {
+    background-color: #FF3300;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.reto-xxxxl h2 {
+    color: #FF3300;
+    font-size: 30px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.reto-xxxxl img {
+    width: 100%;
+    max-width: 800px;
+    height: 380px;
+    object-fit: cover; /* Recorta la imagen proporcionalmente sin deformarla */
+    border-radius: 8px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #FF6600;
+}
+
+.desc-reto {
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.normas {
+    background-color: #FF6600;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.titulo-lista {
+    color: #FF6600;
+    text-align: center;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF6600;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+/* Contenedor de tarjetas de tacos sin Flexbox (usando inline-block) */
+.grid-tacos {
+    text-align: center;
+}
+
+.taco-card {
+    display: inline-block; /*  Box Model y Posicionamiento */
+    vertical-align: top;   /* alinea las tarjetas arriba */
+    width: 44%;
+    margin: 1%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FFD1B3;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.taco-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Mantiene la proporción de la foto del taco sin estirarla */
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FF6600;
+}
+
+.taco-card h3 {
+    color: #FF6600;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.precio {
+    display: inline-block;
+    background-color: #FF6600;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 15px;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+
+.galeria-contenedor {
+    text-align: center;
+}
+
+.galeria-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* 3 columnas por fila */
+    margin: 1%;
+    padding: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #FF6600;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+table {
+    border-collapse: collapse; /* une los bordes de las celdas */
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFD1B3;
+}
+
+th {
+    background-color: #ff5e00; /* Cabecera naranja */
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+/* Pseudoclase nth-child(even) para filas pares tipo cebra  */
+tr:nth-child(even) {
+    background-color: #FFF8F2;
+}
+
+
+fieldset {
+    display: block;
+    border-radius: 8px; /*  Formularios  */
+    border-color: #ff5e00;
+    border-width: 2px;
+    border-style: solid;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+}
+
+legend {
+    font-family: Impact, "Arial Black", sans-serif;
+    color: #ff5e00;
+    font-size: 1.3em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input, select, textarea {
+    border-radius: 8px; /* Formularios  */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1a1a1a;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+/* Tipos radio y checkbox mantienen su tamaño automático */
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+/* Pseudoclase :focus cuando el usuario escribe en un campo */
+input:focus, textarea:focus, select:focus {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+
+#footer, .footer {
+    clear: both; /* limpia cualquier float anterior */
+    background-color: #ff5e00;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: #1a1a1a;
+}
+
+#footer h3, .footer h3 {
+    color: #1a1a1a;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.footer-nav {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-nav a {
+    color: #1a1a1a;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffffff;
+}
+
+#footer p, .footer p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+/* Adaptación para pantallas pequeñas (@media screen) */
+@media screen and (max-width: 768px) {
+    #content, .content, #sideRight, .right-sidebar, .taco-card, .galeria-item {
+        display: block;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+}
